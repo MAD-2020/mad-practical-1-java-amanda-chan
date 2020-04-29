@@ -16,8 +16,16 @@ public class Question4
      * 
      * Hint: 2 loops are required. System.out.print(...) to print on single line.
      */
-     
     Scanner in = new Scanner(System.in);
-    
+    System.out.print("Enter interger: ");
+    int num = in.nextInt();
+    while(num > 0){
+      String p = "";
+      for (int x = 1; x <= num; x +=1){
+        p += "*";
+      }
+      System.out.println(p);
+      num -= 1;
+    }
   }
 }
