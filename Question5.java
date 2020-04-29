@@ -27,6 +27,32 @@ public class Question5
      */
      
     Scanner in = new Scanner(System.in);
-    
+    System.out.print("Enter the number of integers you wish to enter: ");
+    int num = in.nextInt();
+    List<Integer> list = new ArrayList<Integer>();
+
+    int modeCount = 0;
+    int modeInteger = 0; 
+
+    while (num > 0){
+      System.out.print("Enter the interger: ");
+      int integer = in.nextInt();
+      list.add(integer);
+      num -= 1;
+    }
+
+    for (int i : list){
+      int count = 0;
+      for (int n : list){
+        if(i == n){
+          count += 1;
+        }
+      }
+      if(count > modeCount){
+        modeCount = count;
+        modeInteger = i; 
+      }
+    }
+    System.out.println("The mode is: " + modeInteger);
   }
 }
